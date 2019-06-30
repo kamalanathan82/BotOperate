@@ -68,8 +68,8 @@ namespace BotOperate.Services.Data
             ticketdetails.Status = "Open";
             ticketdetails.AssignTo = new Recruiter() { Name = "Nathan S" };
             _databaseContext.Tickets.Add(ticketdetails);
-            _databaseContext.SaveChanges();
-            //await _databaseContext.SaveChangesAsync(cancellationToken);
+            //_databaseContext.SaveChanges();
+           await _databaseContext.SaveChangesAsync(cancellationToken);
 
             //await _notificationService.NotifyRecruiterAboutNewOpenPosition(ticketdetails, cancellationToken);
 
